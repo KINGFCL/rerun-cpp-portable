@@ -45,11 +45,22 @@ MyProject/
 2. **下载 Rerun Viewer (渲染器)**：
 * 在同一个 Releases 页面，下载对应系统架构的 CLI 文件（例如：`rerun-cli-x.x.x-x86_64-unknown-linux-gnu.tar.gz`）。
 * 解压出可执行文件，将其**重命名**为 `rerun`，并放入 `third_party/rerun_viewer/` 目录下。
+
+运行download_viewer.sh脚本，下载rerun渲染程序
+添加wegt,下载代理(可选):
+```bash
+export http_proxy="http://127.0.0.1:7897"
+export https_proxy="http://127.0.0.1:7897"
+```
+
+```bash
+chmod +x download_viewer.sh
+./download_viewer.sh
+```
 * **重要**：赋予其可执行权限：
 ```bash
 cd third_party/rerun_viewer/
 chmod +x rerun
-
 ```
 
 
