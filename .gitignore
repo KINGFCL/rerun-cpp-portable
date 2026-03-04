@@ -1,3 +1,6 @@
 Visualisation/rerun_viewer/rerun
 build/
+.cache/
+.vscode/
+
 
