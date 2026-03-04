@@ -6,7 +6,10 @@ int main() {
     const auto rec = rerun::RecordingStream("my_cpp_app");
     
     // 2. 启动本地的 Rerun 独立查看器应用
-    rec.spawn().exit_on_failure();
+    // 配置 Viewer 的启动选项
+    rerun::SpawnOptions spawn_opts;
+    spawn_opts.executable_name = "./rerun";
+    rec.spawn(spawn_opts).exit_on_failure();
 
     // 3. 准备一些 3D 点云数据
     std::vector<rerun::Position3D> points = {
